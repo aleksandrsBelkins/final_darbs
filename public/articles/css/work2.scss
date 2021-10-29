@@ -1,0 +1,91 @@
+@import url(../../css/style.css);
+
+$color-primary: #FF6464;
+$color-secondary: #00A8CC;
+$color-dark: #21243D;
+$color-light: #8695A4;
+$color-white: #fff;
+$color-black: #000;
+
+$font-size-xxxl: 44px;
+$font-size-xxl: 30px;
+$font-size-xl: 26px;
+$font-size-lg: 22px;
+$font-size-md: 20px;
+$font-size-sm: 18px;
+$font-size-xs: 16px;
+$font-size-xxs: 14px;
+
+
+$screen-sm: 576px;
+$screen-md: 768px;
+$screen-lg: 992px;
+$screen-xl: 1200px;
+
+
+.cat {
+    max-width: 700px;
+    margin: 0 auto 180px;
+    padding: 0 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    
+
+
+    &__title {
+        text-align: center;
+        margin-bottom: 20px;
+
+        @media (max-width: $screen-md) {
+            font-size: $font-size-xxl;
+        }
+    }
+    &__card {
+        position: relative;
+        height: 500px;
+        padding: 15px;
+        margin-bottom: 20px;
+        border-radius: 10px;
+        box-shadow: 5px 5px 15px grey;
+
+        &::after {
+            content: "";
+            position: absolute ;
+            z-index: 5;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: url('../../img/loading.gif') center / 60px no-repeat;
+            display: none;
+        }
+        &.sending::after {
+            display: initial;
+        }
+    }
+
+    &__image {
+        height: 100%;
+        width: 100%;
+    }
+
+    &__btn {
+        padding: 14px 20px;
+        margin: 0 auto 50px;
+        background-color: $color-primary;
+        color: $color-white;
+        font-size: $font-size-md;
+        font-weight: 500;
+        border:  none;
+        border-radius: 2px;
+        text-decoration: none;
+        transition: 0.3s;
+
+        &:hover {
+            background-color: #bd5151;
+            cursor: pointer;
+        }
+    }
+}
+

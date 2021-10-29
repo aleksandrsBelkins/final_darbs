@@ -1,0 +1,126 @@
+@import url(../../css/style.css);
+
+$color-primary: #FF6464;
+$color-secondary: #00A8CC;
+$color-dark: #21243D;
+$color-light: #8695A4;
+$color-white: #fff;
+$color-black: #000;
+
+
+$font-size-xxxl: 44px;
+$font-size-xxl: 30px;
+$font-size-xl: 26px;
+$font-size-lg: 22px;
+$font-size-md: 20px;
+$font-size-sm: 18px;
+$font-size-xs: 16px;
+$font-size-xxs: 14px;
+
+$screen-sm: 576px;
+$screen-md: 768px;
+$screen-lg: 992px;
+$screen-xl: 1200px;
+
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+.article {
+    max-width: 700px;
+    margin: 0 auto;
+    padding: 0 15px 30px;
+
+    &__title {
+        font-size: $font-size-xxl;
+        line-height: 50px;
+        margin-bottom: 30px;
+    }
+    &__info {
+        display: flex;
+        align-items: center;
+        margin-bottom: 30px;
+    }
+    &__year {
+        display: inline-flex;
+        align-items: center;
+        margin-right: 20px;
+        padding: 0px 10px;
+        height: 25px;
+        background-color: $color-primary;
+        color: $color-white;
+        font-weight: 900;
+        font-size: $font-size-sm;
+        border-radius: 16px;
+    }
+    &__category {
+        font-size: $font-size-md;
+        line-height: 29px;
+    }
+    &__text {
+        
+        &-image {
+            max-width: 100%;
+            margin-bottom: 30px;
+
+            &:last-child {
+                margin-bottom: 0;
+            }
+        }
+
+        &-title {
+            margin-top: 25px;
+            font-size: $font-size-xxl;
+            line-height: 60px;
+            font-weight: 500;
+        }
+
+        &-subtitle {
+            margin-bottom: 5px;
+            font-size: $font-size-xl;
+            line-height: 60px;
+            font-weight: 500;
+        }
+
+        .text {
+            margin-bottom: 30px;
+        }
+    }
+
+    @media (max-width: $screen-md) {
+
+        &__title {
+            font-size: $font-size-xxl;
+            line-height: 40px;
+            margin-bottom: 20px;
+        }
+
+        &__category {
+
+            font-size: $font-size-sm;
+            line-height: 26px;
+        }
+
+        &__text {
+
+            &-title {
+                margin-top: 15px;
+                font-size: $font-size-xl;
+            }
+
+            &-subtitle {
+                font-size: $font-size-md;
+            }
+
+            &-image {
+                margin-bottom: 20px;
+            }
+
+            .text {
+                margin-bottom: 20px;
+            }
+        }
+    }
+}

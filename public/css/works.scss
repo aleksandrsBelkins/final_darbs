@@ -1,0 +1,67 @@
+@import url('style.css');
+
+$color-primary: #FF6464;
+$color-secondary: #00A8CC;
+$color-dark: #21243D;
+$color-light: #8695A4;
+$color-white: #fff;
+$color-black: #000;
+
+$font-size-xxxl: 44px;
+$font-size-xxl: 30px;
+$font-size-xl: 26px;
+$font-size-lg: 22px;
+$font-size-md: 20px;
+$font-size-sm: 18px;
+$font-size-xs: 16px;
+$font-size-xxs: 14px;
+
+$screen-sm: 576px;
+$screen-md: 768px;
+$screen-lg: 992px;
+$screen-xl: 1200px;
+
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+.works {
+
+    &--page {
+        max-width: 700px;
+        margin: 0 auto;
+        padding: 0 10px 60px;
+    }
+    
+    &__main-title {
+        margin-bottom: 40px;
+        font-size: $font-size-xxxl;
+    }
+
+    @media (max-width: $screen-md) {
+
+        &__main-title {
+            margin-bottom: 30px;
+            font-size: $font-size-xxl;
+        }  
+    }
+
+    @media (max-width: $screen-sm) {
+        
+        &--page {
+            padding: 0 10px;
+        }
+
+        &__item {
+            margin-bottom: 30px;
+
+            &:nth-child(3) {
+                margin-bottom: 0;
+            }
+        }
+
+        
+    }
+}
