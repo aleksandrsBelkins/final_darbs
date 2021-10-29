@@ -15,11 +15,13 @@ async function formSend (event) {
     event.preventDefault();
 
     let error = formValidate(form);
+    let formData = new FormData(form);
 
     if (error === 0) {
         form.classList.add('sending');
         let response = await fetch('send.php', {
-            method: 'POST'
+            method: 'POST',
+            body: formData
           })
         
         if (response.ok) {
