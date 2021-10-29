@@ -9,19 +9,16 @@ textArea.addEventListener('input', function (event) {
     }
 })
 
-form.addEventListener('submit', formSend);
-
-async function formSend (event) {
+form.addEventListener('submit', async (event) => {
     event.preventDefault();
 
     let error = formValidate(form);
-    let formData = new FormData(form);
 
     if (error === 0) {
         form.classList.add('sending');
         let response = await fetch('send.php', {
             method: 'POST',
-            body: formData
+            body: new FormData(form)
           })
         
         if (response.ok) {
@@ -61,14 +58,10 @@ async function formSend (event) {
         return error;
     } 
     
-
-
     function emailTest(input) {
         return !/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,8})+$/.test(input.value);
     }
-};
-
-
+});
 
 
 // let form = document.querySelector('.contact__form');
