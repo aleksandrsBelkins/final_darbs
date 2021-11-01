@@ -96,6 +96,13 @@ body {
     }
 }
 
-.template {
-    display: none;
+.text-link {
+    margin-left: 5px;
+    text-decoration: none;
+    color: $color-light;
+
+    &:hover {
+        text-decoration: underline;
+        cursor: pointer;
+    }
 }
