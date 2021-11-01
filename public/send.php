@@ -32,7 +32,7 @@ $mail->SMTPAuth   = true;
 
 $mail->Host       = 'mail.inbox.lv'; 
 $mail->Username   = 'myportfoliotest'; 
-$mail->Password   = '24KbPQ7pMg'; 
+$mail->Password   = '1WdbfJY!9R'; 
 $mail->SMTPSecure = 'ssl';
 $mail->Port       = 465;
 $mail->setFrom('myportfoliotest@inbox.lv', 'My portfolio'); 
