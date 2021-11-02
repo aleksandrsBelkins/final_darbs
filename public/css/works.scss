@@ -7,38 +7,53 @@ $color-light: #8695A4;
 $color-white: #fff;
 $color-black: #000;
 
-$font-size-xxxl: 44px;
-$font-size-xxl: 30px;
-$font-size-xl: 26px;
-$font-size-lg: 22px;
-$font-size-md: 20px;
-$font-size-sm: 18px;
-$font-size-xs: 16px;
-$font-size-xxs: 14px;
+$font-size-xxxl: rem(44px);
+$font-size-xxl: rem(30px);
+$font-size-xl: rem(26px);
+$font-size-lg: rem(22px);
+$font-size-md: rem(20px);
+$font-size-sm: rem(18px);
+$font-size-xs: rem(16px);
+$font-size-xxs: rem(14px);
+
 
 $screen-sm: 576px;
 $screen-md: 768px;
 $screen-lg: 992px;
 $screen-xl: 1200px;
 
+$base: rem(4px);
+
+// html {
+//     @media (max-width: $screen-md) {
+//         font-size: 14px;
+//     }
+//     @media (max-width: $screen-sm) {
+//         font-size: 12px;
+//     }
+// }
 
 .works {
 
     &--page {
         max-width: 700px;
         margin: 0 auto;
-        padding: 0 10px 60px;
+        padding: 0 $base*3 $base*15;
     }
     
     &__main-title {
-        margin-bottom: 40px;
+        margin-bottom: $base*10;
         font-size: $font-size-xxxl;
+    }
+
+    &__image {
+        height: 100%;
     }
 
     @media (max-width: $screen-md) {
 
         &__main-title {
-            margin-bottom: 30px;
+            margin-bottom: $base*7;
             font-size: $font-size-xxl;
         }  
     }
@@ -46,11 +61,11 @@ $screen-xl: 1200px;
     @media (max-width: $screen-sm) {
         
         &--page {
-            padding: 0 10px;
+            padding: 0 $base*3;
         }
 
         &__item {
-            margin-bottom: 30px;
+            margin-bottom: $base*7;
 
             &:nth-child(3) {
                 margin-bottom: 0;
@@ -58,5 +73,119 @@ $screen-xl: 1200px;
         }
 
         
+    }
+}
+
+.modal {
+    $parent: &;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    visibility: hidden;
+    background-color: rgba(0, 0, 0, 0.5);
+    opacity: 0;
+    transition: .4s;
+
+    &__dialog {
+        display: flex;
+        flex-direction: column;
+        overflow: hidden;
+        max-height: 80vh;
+        background-color: $color-white;
+        border-radius: $base*2;
+        transition: .4s;
+        transform: translateY(-50px);
+    }
+
+    &__header,
+    &__body,
+    &__footer {
+        padding: $base*5 $base*10;
+    }
+
+    &__header {
+        display: flex;
+        align-items: center ;
+
+        &-content {
+            
+            flex-grow: 1;
+            font-size: $font-size-lg;
+        }
+
+        &-close-btn {
+            align-self: flex-start;
+            margin: 0;
+            padding: $base*3;
+            background: none;
+            border: none;
+            cursor: pointer;
+            font-size: $base*11;
+            line-height: $base*6;
+
+            &:hover {
+                color: $color-primary;
+                cursor: pointer;
+            }
+        }
+    }
+
+    &__body {
+        flex-grow: 1;
+        overflow: auto;
+
+        &-text {
+            font-size: $font-size-md;
+
+            img {
+                width: 100%;
+                height: $base*100;
+                margin-bottom: $base*6;
+            }
+
+            p {
+                margin-bottom: $base*5;
+            }
+        }
+    }
+
+    &__footer {
+        // align-self: center;
+        &-close-btn {
+            display: inline-block;
+            padding: $base*2 $base*4;
+            background-color: $color-primary;
+            color: $color-white;
+            font-size: $font-size-md;
+            font-weight: 500;
+            border:  none;
+            border-radius: $base/2;
+            text-decoration: none;
+            transition: 0.4s;
+        
+            &:hover {
+                background-color: #bd5151;
+                cursor: pointer;
+            }
+        }
+    }
+
+    &--s &__dialog { width: 300px; }
+    &--m &__dialog { width: 600px; }
+    &--l &__dialog { width: 900px; }
+
+    &--active {
+        visibility: visible;
+        opacity: 1;
+
+        #{$parent}__dialog {
+            transform: translateY(0); 
+        }
     }
 }

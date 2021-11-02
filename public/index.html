@@ -103,11 +103,17 @@
             <div class="container">
                 <div class="works__title">Featured works</div>
                 <div class="works__item">
-                    <a class="works__image" href="works.html#work1" target="_blank">
+                    <a class="works__image js-modal-open" href="#modal-1">
                         <img src="./img/01.png" alt="work-image">
+                        <span class="works__image-loop">
+                            <svg width="19" height="18" viewBox="0 0 19 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M13.1138 7.01428C13.1138 10.29 10.4548 12.9475 7.17224 12.9475C3.8897 12.9475 1.23071 10.29 1.23071 7.01428C1.23071 3.73858 3.8897 1.08105 7.17224 1.08105C10.4548 1.08105 13.1138 3.73858 13.1138 7.01428Z" stroke-width="2"/>
+                                <path d="M12.1304 11.9666L17.0886 16.9189" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>  
+                        </span>
                     </a>
                     <div class="works__content">
-                        <a class="works__content-title" href="works.html#work1" target="_blank">Random images with AJAX requests</a>
+                        <a class="works__content-title" href="#">Random images with AJAX requests</a>
                         <div class="works__content-info">
                             <div class="works__content-year">2021</div>
                             <div class="works__content-category">JS</div>
@@ -121,6 +127,12 @@
                 <div class="works__item">
                     <a class="works__image" href="works.html#work2" target="_blank">
                         <img src="./img/02.png" alt="Linkedin-page-image">
+                        <span class="works__image-loop">
+                            <svg width="19" height="18" viewBox="0 0 19 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M13.1138 7.01428C13.1138 10.29 10.4548 12.9475 7.17224 12.9475C3.8897 12.9475 1.23071 10.29 1.23071 7.01428C1.23071 3.73858 3.8897 1.08105 7.17224 1.08105C10.4548 1.08105 13.1138 3.73858 13.1138 7.01428Z" stroke-width="2"/>
+                                <path d="M12.1304 11.9666L17.0886 16.9189" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>  
+                        </span>
                     </a>
                     <div class="works__content">
                         <a class="works__content-title" href="works.html#work2" target="_blank">Linkedin page from scratch</a>
@@ -137,6 +149,12 @@
                 <div class="works__item">
                     <a class="works__image" href="works.html#work3" target="_blank">
                         <img src="./img/03.png" alt="todo-list">
+                        <span class="works__image-loop">
+                            <svg width="19" height="18" viewBox="0 0 19 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M13.1138 7.01428C13.1138 10.29 10.4548 12.9475 7.17224 12.9475C3.8897 12.9475 1.23071 10.29 1.23071 7.01428C1.23071 3.73858 3.8897 1.08105 7.17224 1.08105C10.4548 1.08105 13.1138 3.73858 13.1138 7.01428Z" stroke-width="2"/>
+                                <path d="M12.1304 11.9666L17.0886 16.9189" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>  
+                        </span>
                     </a>
                     <div class="works__content">
                         <a class="works__content-title" href="works.html#work3" target="_blank">TODO list</a>
@@ -153,6 +171,29 @@
             </div>
         </section>
         <!-- / works -->
+
+        <!-- modal -->
+        <div class="modal modal--m" id="modal-1">
+            <div class="modal__dialog">
+                <div class="modal__header">
+                    <div class="modal__header-content">
+                        <h3>Random images with AJAX requests</h3>
+                    </div>
+                    <button class="js-modal-close modal__header-close-btn">&times;</button>
+                </div>
+                <div class="modal__body">
+                    <div class="modal__body-text">
+                        <img src="img/01.png" alt="">
+                        <p class="text">Create a page with random pictures used AJAX requests.</p>
+                        <a class="works__content-link" href="https://github.com/privetjasasha/random-cat" target="_blank">Link on GitHub</a>
+                    </div>
+                </div>
+                <div class="modal__footer">
+                    <button class="js-modal-close modal__footer-close-btn">Close</button>
+                </div>
+            </div>
+        </div>
+        <!-- / modal -->
     </main>
 
     <!-- footer -->
@@ -188,5 +229,6 @@
     <!-- / footer -->
     <script src="js/scripts.js"></script>
     <script src="js/blog.js"></script>
+    <script src="js/modal.js"></script>
 </body>
 </html>

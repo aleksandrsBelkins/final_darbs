@@ -7,32 +7,44 @@ $color-light: #8695A4;
 $color-white: #fff;
 $color-black: #000;
 
-$font-size-xxxl: 44px;
-$font-size-xxl: 30px;
-$font-size-xl: 26px;
-$font-size-lg: 22px;
-$font-size-md: 20px;
-$font-size-sm: 18px;
-$font-size-xs: 16px;
-$font-size-xxs: 14px;
+$font-size-xxxl: rem(44px);
+$font-size-xxl: rem(30px);
+$font-size-xl: rem(26px);
+$font-size-lg: rem(22px);
+$font-size-md: rem(20px);
+$font-size-sm: rem(18px);
+$font-size-xs: rem(16px);
+$font-size-xxs: rem(14px);
+
 
 $screen-sm: 576px;
 $screen-md: 768px;
 $screen-lg: 992px;
 $screen-xl: 1200px;
 
+$base: rem(4px);
+
+// html {
+//     @media (max-width: $screen-md) {
+//         font-size: 14px;
+//     }
+//     @media (max-width: $screen-sm) {
+//         font-size: 12px;
+//     }
+// }
+
 
 .blog {
     max-width: 700px;
     margin: 0 auto;
-    padding: 0 10px 50px;
+    padding: 0 $base*3 $base*12;
 
     &__title {
-        margin-bottom: 55px;
+        margin-bottom: $base*13;
     }
     &__item {
-        margin-bottom: 30px;
-        padding-bottom: 30px;
+        margin-bottom: $base*7;
+        padding-bottom: $base*7;
         border-bottom: 1px solid #E0E0E0;
 
         &:last-child {
@@ -40,29 +52,29 @@ $screen-xl: 1200px;
         }
 
         &-title {
-            margin-bottom: 15px;
+            margin-bottom: $base*4;
             font-weight: 500;
-            line-height: 44px;
+            line-height: $base*11;
         }
         &-info {
             display: flex;
             align-items: center;
-            margin-bottom: 15px;
+            margin-bottom: $base*4;
             font-size: $font-size-md;
         }
 
         &-date {
-            padding-right: 20px;
+            padding-right: $base*5;
             border-right: 1px solid $color-dark;
         }
         
         &-description {
-            padding-left: 20px;
+            padding-left: $base*5;
             color: $color-light;
         }
 
         &-text {
-            margin-bottom: 20px;
+            margin-bottom: $base*5;
             &:last-child {
                 margin-bottom: 0px;
             }
@@ -89,13 +101,13 @@ $screen-xl: 1200px;
         }
 
         &__item {
-            padding-bottom: 24px;
-            margin-bottom: 24px;
+            padding-bottom: $base*6;
+            margin-bottom: $base*6;
 
             &-title {
-                margin-bottom: 5px;
+                margin-bottom: $base;
                 font-size: $font-size-xl;
-                line-height: 38px;
+                line-height: $base*9;
             }
 
             &-info {
@@ -103,7 +115,7 @@ $screen-xl: 1200px;
             }
 
             &-separator {
-                margin: 0 15px;
+                margin: 0 $base*4;
                 font-size: $font-size-sm;
             }
         }
@@ -113,15 +125,15 @@ $screen-xl: 1200px;
 .gallery {
     max-width: 700px;
     margin: 0 auto;
-    padding: 0 10px 52px;
+    padding: 0 $base*3 $base*13;
 
     &__title {
         color: $color-dark;
         font-weight: 700;
-        margin-bottom: 55px;
+        margin-bottom: $base*13;
     }
     &__swiper {
-        padding: 30px 0 50px 0;
+        padding: $base*7 0 $base*12 0;
     }
 
     &__slide {
@@ -130,7 +142,7 @@ $screen-xl: 1200px;
 
         img {
             max-width: 100%;
-            border-radius: 10px;
+            border-radius: $base*2;
         }
     }
 
@@ -144,8 +156,8 @@ $screen-xl: 1200px;
     .swiper-pagination {
 
         &-bullet {
-            width: 8px;
-            height: 8px;
+            width: $base*2;
+            height: $base*2;
             background-color: $color-primary;
         }
     }
@@ -158,7 +170,7 @@ $screen-xl: 1200px;
 }
 
 .text-link {
-    margin-left: 5px;
+    margin-left: $base;
     text-decoration: none;
     color: $color-light;
 
