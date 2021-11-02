@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Blog</title>
 
+    <link rel="stylesheet" href="https://unpkg.com/swiper@7/swiper-bundle.min.css"/>
     <link rel="stylesheet" href="./css/normolize.css">
     <link rel="stylesheet" href="./css/blog.css">
 </head>
@@ -97,6 +98,34 @@
             </div>
         </section>
         <!-- / blog -->
+
+        <!-- swiper -->
+        <section class="gallery">
+            <h2 class="gallery__title">My Gallery</h2>
+            <div class="gallery__swiper swiper">
+                <div class="gallery__wrapper swiper-wrapper">
+                    <div class="gallery__slide swiper-slide">
+                        <img src="img/photo1.jpeg" alt="">
+                    </div>
+                    <div class="gallery__slide swiper-slide">
+                        <img src="img/photo2.jpeg" alt="">
+                    </div>
+                    <div class="gallery__slide swiper-slide">
+                        <img src="img/photo4.jpeg" alt="">
+                    </div>
+                    <!-- <div class="gallery__slide swiper-slide">
+                        <img src="img/photo3.jpeg" alt="">
+                    </div> -->
+                </div>
+                
+                <div class="swiper-pagination"></div>
+            
+                <div class="swiper-button-prev"></div>
+                <div class="swiper-button-next"></div>
+            </div>
+        </section>
+        <!--  / swiper -->
+  
     </main>
 
     <!-- footer -->
@@ -131,7 +160,7 @@
     </footer>
     <!-- / footer -->
 
-    <script src="js/request.js"></script>
+    <script src="https://unpkg.com/swiper@7/swiper-bundle.min.js"></script>
     <script src="js/scripts.js"></script>
     <script src="js/blog.js"></script>
 </body>
