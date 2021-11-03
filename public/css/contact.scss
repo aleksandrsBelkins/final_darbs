@@ -106,7 +106,7 @@ body {
             }
             
             input {
-                padding: $base*4;
+                padding: $base*3;
                 border: 1px solid $color-light;
                 border-radius: $base;
                 color: $color-dark;
@@ -229,7 +229,7 @@ body {
             
 
             &:hover {
-                border: 1px solid $color-primary;
+                border-bottom: 1px solid $color-primary;
             }
         }
     }
@@ -298,7 +298,6 @@ body {
     }
 
     &__form {
-        margin-bottom: $base*2;
     
         &-name {
             display: flex;
@@ -319,7 +318,7 @@ body {
             
     
             input {
-                padding: $base*4;
+                padding: $base*3;
                 border: 1px solid $color-light;
                 border-radius: $base*2;
                 color: $color-dark;
@@ -340,6 +339,13 @@ body {
             display: flex;
             flex-direction: column-reverse;
             margin-bottom: $base*2;
+
+            &-counter {
+                flex-grow: 1;
+                padding: 0 $base*4;
+                font-size: $font-size-xxs;
+                font-style: italic;
+            }
             
 
             &_label {
@@ -378,6 +384,11 @@ body {
 
         &-btn {
             text-align: end;
+
+            &-wrapper {
+                display: flex;
+                padding-bottom: $base*6;
+            }
             
             button {
                 display: inline-flex;

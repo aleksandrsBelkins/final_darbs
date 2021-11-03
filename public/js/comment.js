@@ -3,8 +3,11 @@ const commentWrapper = document.querySelector('.comment__wrapper');
 const commentName = commentForm.name;
 const commentNameLabel = document.querySelector('.comment__form-name_label');
 const commentText = commentForm.comment;
+const commentTextItemLimit = commentText.getAttribute('maxlength');
+const commentTextCounter = document.querySelector('.comment__form-message-counter span');
 const commentTextLabel = document.querySelector('.comment__form-message_label');
 
+commentTextCounter.innerHTML = commentTextItemLimit;
 
 commentName.addEventListener('input', () => {
     commentNameLabel.classList.add('comment__form-name_label--active');
@@ -13,9 +16,10 @@ commentName.addEventListener('input', () => {
     }
 })
 
-console.log|(commentText);
-
 commentText.addEventListener('input', () => {
+    let commentTextCounterResult = commentTextItemLimit - commentText.value.length;
+    commentTextCounter.innerHTML = commentTextCounterResult;
+
     commentTextLabel.classList.add('comment__form-message_label--active');
     if (!commentText.value) {
         commentTextLabel.classList.remove('comment__form-message_label--active');
@@ -69,3 +73,4 @@ function addNewComment(id, name, created_at, comment) {
     div.querySelector('.comment__message-text').textContent = comment;
     commentWrapper.prepend(div);
 }
+

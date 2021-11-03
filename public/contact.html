@@ -124,16 +124,19 @@
                 </div>
                 <div class="comment__form-message">
                     <textarea 
+                        maxlength="150"
                         class="require2"
                         name="comment" 
                         id="comment"
-                        placeholder="*Your Comment"
-                    ></textarea>
+                        placeholder="*Your Comment"></textarea>
                     <label class="comment__form-message_label" for="comment">Your Comment</label>
                 </div>
+                <div class="comment__form-btn-wrapper">
+                    <div class="comment__form-message-counter"><span></span> characters remaining</div>
                 <div class="comment__form-btn">
                     <button type="submit" class="blog__form-btn-send">Send</button>
                     <button type="reset" class="blog__form-btn-clear">Clear</button>
+                </div>
                 </div>
             </form>
             <div class="comment__wrapper">
