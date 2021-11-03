@@ -28,14 +28,14 @@ document.addEventListener('click', (event) => {
         modal.addEventListener('transitionend', showScrool);
     } 
 
-    const modal = document.querySelector('.modal');
-
-    modal.addEventListener('click', (event) => {
-        if(!event.target.closest('.modal__dialog')) {
-            modal.classList.remove('modal--active')
-            modal.addEventListener('transitionend', showScrool);
-        }
-})
+    document.querySelectorAll('.modal').forEach(modal => {
+        modal.addEventListener('click', (event) => {
+            if(!event.target.closest('.modal__dialog')) {
+                modal.classList.remove('modal--active')
+                modal.addEventListener('transitionend', showScrool);
+            }
+        })
+    });
 });
 
 function getScroolbarWidth() {

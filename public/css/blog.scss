@@ -1,5 +1,13 @@
 @import url('style.css');
 
+@function strip-unit($num) {
+    @return $num / ($num * 0 + 1);
+}
+
+@function rem($num) {
+    @return (strip-unit($num) / 16) * 1rem;
+}
+
 $color-primary: #FF6464;
 $color-secondary: #00A8CC;
 $color-dark: #21243D;

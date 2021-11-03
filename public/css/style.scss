@@ -70,11 +70,8 @@ body {
 
     @media (max-width: $screen-sm) {
         padding-top: $base*8;
-    }
-
-    
+    }   
 }
-
 
 h1,
 h2,
@@ -104,7 +101,6 @@ h2 {
     font-size: $font-size-xs;
     line-height: $base*6;
 }
-
 
 // === header ===
 .header {
@@ -259,7 +255,6 @@ h2 {
         max-width: $base*60;
         border-radius: 100%;
         box-shadow: -$base $base*3 $base*2 0px #EDF7FA;
-
     }
 
     @media (max-width: $screen-md) {
@@ -387,7 +382,6 @@ h2 {
             }
             
             &:first-child {
-                // margin: 0 0 $base*4 0;
                 padding: $base*5;
             }
 

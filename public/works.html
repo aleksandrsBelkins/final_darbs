@@ -67,7 +67,7 @@
                 </div>
             </div>
             <div id="work2" class="works__item">
-                <a class="works__image" href="articles/work1.html" target="_blank">
+                <a class="works__image js-modal-open" href="modal-2">
                     <img src="./img/02.png" alt="Linkedin-page-image">
                     <span class="works__image-loop">
                         <svg width="19" height="18" viewBox="0 0 19 18" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -89,7 +89,7 @@
                 </div>
             </div>
             <div class="works__item">
-                <a class="works__image js-modal-open" href="#modal-1">
+                <a class="works__image js-modal-open" href="#modal-3">
                     <img src="./img/03.png" alt="todo-list">
                     <span class="works__image-loop">
                         <svg width="19" height="18" viewBox="0 0 19 18" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -99,7 +99,7 @@
                     </span>
                 </a>
                 <div id="work3" class="works__content">
-                    <a class="js-modal-open works__content-title" href="#modal-1">TODO list</a>
+                    <a class="works__content-title" href="#" target="_blank">TODO list</a>
                     <div class="works__content-info">
                         <div class="works__content-year">2021</div>
                         <div class="works__content-category">JS, PHP, MySQL</div>
@@ -111,7 +111,7 @@
                 </div>
             </div>
             <div class="works__item">
-                <a class="works__image" href="#">
+                <a class="works__image js-modal-open" href="#modal-4">
                     <img src="./img/04.png" alt="four_in_line-game">
                     <span class="works__image-loop">
                         <svg width="19" height="18" viewBox="0 0 19 18" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -121,7 +121,7 @@
                     </span>
                 </a>
                 <div class="works__content">
-                    <a class="works__content-title" href="#">Tic tac toe & Four in line games</a>
+                    <a class="works__content-title" href="#" target="_blank">Tic tac toe & Four in line games</a>
                     <div class="works__content-info">
                         <div class="works__content-year">2021</div>
                         <div class="works__content-category">JS, PHP</div>
@@ -135,7 +135,8 @@
         </section>
         <!-- / works -->
 
-        <div class="modal modal--m" id="modal-1">
+        <!-- modal -->
+        <div class="modal modal--l" id="modal-1">
             <div class="modal__dialog">
                 <div class="modal__header">
                     <div class="modal__header-content">
@@ -145,7 +146,7 @@
                 </div>
                 <div class="modal__body">
                     <div class="modal__body-text">
-                        <img src="img/cat.jpeg" alt="">
+                        <img src="img/01.png" alt="">
                         <p class="text">Create a page with random pictures used AJAX requests.</p>
                         <a class="works__content-link" href="https://github.com/privetjasasha/random-cat" target="_blank">Link on GitHub</a>
                     </div>
@@ -155,6 +156,67 @@
                 </div>
             </div>
         </div>
+        <div class="modal modal--l" id="modal-2">
+            <div class="modal__dialog">
+                <div class="modal__header">
+                    <div class="modal__header-content">
+                        <h3>Linkedin page from scratch</h3>
+                    </div>
+                    <button class="js-modal-close modal__header-close-btn">&times;</button>
+                </div>
+                <div class="modal__body">
+                    <div class="modal__body-text">
+                        <img src="img/02.png" alt="">
+                        <p class="text">Create a Linkedin page from scratch. I used JS, PHP, MySQL databases.</p>
+                        <a class="works__content-link" href="https://github.com/privetjasasha/linkedin-page" target="_blank">Link on GitHub</a>
+                    </div>
+                </div>
+                <div class="modal__footer">
+                    <button class="js-modal-close modal__footer-close-btn">Close</button>
+                </div>
+            </div>
+        </div>
+        <div class="modal modal--l" id="modal-3">
+            <div class="modal__dialog">
+                <div class="modal__header">
+                    <div class="modal__header-content">
+                        <h3>TODO list</h3>
+                    </div>
+                    <button class="js-modal-close modal__header-close-btn">&times;</button>
+                </div>
+                <div class="modal__body">
+                    <div class="modal__body-text">
+                        <img src="img/03.png" alt="">
+                        <p class="text">The first acquaintance with MySQL databases. Also used Ajax requests for api.</p>
+                        <a class="works__content-link" href="https://github.com/privetjasasha/todo-list" target="_blank">Link on GitHub</a>
+                    </div>
+                </div>
+                <div class="modal__footer">
+                    <button class="js-modal-close modal__footer-close-btn">Close</button>
+                </div>
+            </div>
+        </div>
+        <div class="modal modal--l" id="modal-4">
+            <div class="modal__dialog">
+                <div class="modal__header">
+                    <div class="modal__header-content">
+                        <h3>Tic tac toe & Four in line games</h3>
+                    </div>
+                    <button class="js-modal-close modal__header-close-btn">&times;</button>
+                </div>
+                <div class="modal__body">
+                    <div class="modal__body-text">
+                        <img src="img/04.png" alt="">
+                        <p class="text">The first acquaintance with basics of JS and PHP. Also used Ajax requests for api.</p>
+                        <a class="works__content-link" href="https://github.com/privetjasasha/four-in-line" target="_blank">Link on GitHub</a>
+                    </div>
+                </div>
+                <div class="modal__footer">
+                    <button class="js-modal-close modal__footer-close-btn">Close</button>
+                </div>
+            </div>
+        </div>
+        <!-- / modal -->
 
     </main>
 
