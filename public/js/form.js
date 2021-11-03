@@ -22,12 +22,14 @@ form.addEventListener('submit', async (event) => {
           })
         
         if (response.ok) {
-            let result = await response.json();
-            alert(result.message);
+            // let result = await response.json();
+            document.body.style.padding = `${getScroolbarWidth()}px`;
+            document.body.style.overflow = 'hidden';
+            document.getElementById('modal-1').classList.add('modal--active')
             form.reset();
             form.classList.remove('sending');
         } else {
-            alert('Error'); 
+            document.getElementById('modal-2').classList.add('modal--active')
             form.classList.remove('sending');
         }
 
@@ -62,64 +64,3 @@ form.addEventListener('submit', async (event) => {
         return !/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,8})+$/.test(input.value);
     }
 });
-
-
-// let form = document.querySelector('.contact__form');
-// let inputName = form.name;
-// let inputEmail = form.email;
-
-// form.addEventListener('submit', function (event) {
-//     if (!inputName.value) {
-//         event.preventDefault();
-//         if (!inputName.previousElementSibling) {
-//             inputName.parentElement.insertAdjacentHTML(
-//                 "afterbegin",
-//                 `<div class="form-error">
-//                     *Name field is empty!
-//                 </div>`
-//             );
-//         } 
-//     } 
-//     if (!inputEmail.value) {
-//         event.preventDefault();
-//         if (!inputEmail.previousElementSibling) {
-//             inputEmail.parentElement.insertAdjacentHTML(
-//                 "afterbegin",
-//                 `<div class="form-error">
-//                     *Email field is empty!
-//                 </div>`
-//             );
-//         } 
-//     }
-//     if (!textArea.value) {
-//         event.preventDefault();
-//         if (!textArea.previousElementSibling) {
-//             textArea.parentElement.insertAdjacentHTML(
-//                 "afterbegin",
-//                 `<div class="form-error">
-//                     *Message field is empty!
-//                 </div>`
-//             );
-//         }
-//     } 
-// })
-
-    
-// inputName.addEventListener('focus', (event) => {
-//     if (inputName.previousElementSibling) {
-//         inputName.previousElementSibling.remove();
-//     }
-// })
-
-// inputEmail.addEventListener('focus', (event) => {
-//     if (inputEmail.previousElementSibling) {
-//         inputEmail.previousElementSibling.remove();
-//     }
-// })
-
-// textArea.addEventListener('focus', (event) => {
-//     if (textArea.previousElementSibling) {
-//         textArea.previousElementSibling.remove();
-//     }
-// })
-

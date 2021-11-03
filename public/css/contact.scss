@@ -444,6 +444,30 @@ body {
     }
 }
 
+.modal {
+    &__header {
+        padding: 0;
+    }
+
+    &__body {
+        padding: $base*2 $base*4;
+
+        &-text {
+            img {
+                width: 100%;
+                height: 100%;
+            }
+
+            h3 {
+                margin-bottom: $base*4;
+            }
+        }
+    }
+    &__footer {
+        align-self: center;
+    }
+}
+
 .template {
     display: none;
 }
