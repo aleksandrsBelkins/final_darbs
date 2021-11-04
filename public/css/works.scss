@@ -54,10 +54,6 @@ $base: rem(4px);
         font-size: $font-size-xxxl;
     }
 
-    &__image {
-        height: 100%;
-    }
-
     @media (max-width: $screen-md) {
 
         &__main-title {
@@ -78,7 +74,6 @@ $base: rem(4px);
             &:nth-of-type(1n+3) {
                 display: block;
             }
-        
         }
     }
 }
@@ -113,7 +108,7 @@ $base: rem(4px);
     &__header,
     &__body,
     &__footer {
-        padding: $base*5 $base*10;
+        padding: $base*4 $base*8;
     }
 
     &__header {
@@ -152,8 +147,8 @@ $base: rem(4px);
             font-size: $font-size-md;
 
             img {
-                width: auto;
-                height: $base*100;
+                max-width: 100%;
+                height: auto;
                 margin-bottom: $base*6;
             }
 
@@ -164,7 +159,6 @@ $base: rem(4px);
     }
 
     &__footer {
-        // align-self: center;
         &-close-btn {
             display: inline-block;
             padding: $base*2 $base*4;
